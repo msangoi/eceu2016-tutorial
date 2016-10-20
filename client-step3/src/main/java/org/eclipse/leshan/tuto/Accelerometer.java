@@ -37,8 +37,11 @@ public class Accelerometer extends BaseInstanceEnabler {
     // TODO
 
     // Start a timer in charge of updating the accelerometer data every 500 milliseconds.
+    // You can use java.util.Timer to schedule a periodic java.util.TimerTask.
 
-    // Override the read() method to implement X,Y,Z resources
+    // Call the fireResourcesChange() method to trigger a notification
+
+    // Override the read() method to implement the X,Y,Z resources
 
     private void i2cInit() {
         System.setProperty("pi4j.armel", ""); // load soft float native library

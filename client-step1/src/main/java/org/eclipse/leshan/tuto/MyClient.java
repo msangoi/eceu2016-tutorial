@@ -6,7 +6,9 @@ public class MyClient {
 
         String endpoint = MangohUtil.getImei();
 
-        // TODO :)
+        // TODO
+
+        // Use the LeshanClientBuilder to create a default client
 
     }
 

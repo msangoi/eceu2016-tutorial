@@ -17,6 +17,8 @@ public class MyClient {
 
         LeshanClientBuilder builder = new LeshanClientBuilder(MangohUtil.getImei());
 
+        // TODO initialize and create an instance of device object
+
         // Initialize objects list
         ObjectsInitializer initializer = new ObjectsInitializer();
         initializer.setInstancesForObject(LwM2mId.SECURITY, Security.noSec("coap://leshan.eclipse.org:5683", 123));
@@ -25,7 +27,6 @@ public class MyClient {
         List<LwM2mObjectEnabler> enablers = initializer.create(LwM2mId.SECURITY, LwM2mId.SERVER);
         builder.setObjects(enablers);
 
-        // TODO initialize and create an instance of device object
 
         LeshanClient client = builder.build();
 
